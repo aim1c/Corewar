@@ -11,11 +11,15 @@
 
 #include "libft.h"
 #include <fcntl.h>
+#include "errors.h"
+#include "oh.h"
 
-
-# define MAX_PLAYERS 4
-# define MEM_SIZE (4 * 1024)
-# define CHAMP_MAX_SIZE (MEM_SIZE / 6)
+typedef struct 			s_vm
+{
+	int					nbr_cycles;
+	int					has_n;
+	int					has_dump;
+}						t_vm;
 
 typedef struct			s_champion
 {
@@ -29,5 +33,14 @@ typedef struct			s_champion
 	struct s_champion	*next;
 }						t_champion;
 
+//validate
+int		check_unsupport_flags(int argc, char **argv);
+void	check_order_numbers(int argc, char **argv);
 
+
+
+
+//util
+int		has_prefix(char *str, char sub_char);
+int		all_digits(char *str);
 #endif /* corewar_h */

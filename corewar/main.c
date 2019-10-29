@@ -7,16 +7,57 @@
 //
 
 #include "corewar.h"
+#include "errors.h"
 #include "stdio.h"
 
-int main(int argc, const char * argv[]) {
+void	ft_find_flags(int argc, char **argv)
+{
+	int		i;
 	
-	int fd = open("42.cor", O_RDONLY);
-	char buff[5];
+	i = 0;
+	while (++i < argc)
+	{
+		
+	}
+}
+
+void	check_negative_and_magic_header(int fd)
+{
+	unsigned char buff[4];
 	
-	read(fd, &buff, sizeof(int));
-	printf("%x", buff[0]);
-	printf("%x", buff[1]);
-	printf("%x", buff[2]);
-	printf("%x\n", buff[3]);
+	if (fd < 1)
+		panic_error();
+	read(fd, &buff[3], 1);
+	read(fd, &buff[2], 1);
+	read(fd, &buff[1], 1);
+	read(fd, &buff[0], 1);
+	if (*(unsigned int *)buff != COREWAR_EXEC_MAGIC)
+		panic_error();
+}
+
+void	check_fd_with_magic(int argc, char	**argv)
+{
+	int		i;
+	
+	i = 0;
+	while (++i < argc)
+	{
+		if (ft_strstr("-n", argv[i]) || ft_strstr("-dump", argv[i]))
+			i++;
+		else
+			check_negative_and_magic_header(open(argv[i], O_RDONLY));
+	}
+}
+
+void	error_handler(int argc, char **argv)
+{
+	if (check_unsupport_flags(argc, argv) > 0)
+		check_order_numbers(argc, argv);
+	check_fd_with_magic(argc, argv);
+	ft_printf("Log: - Validation complete\n");
+}
+
+int main(int argc, char *argv[])
+{
+	error_handler(argc, argv);
 }

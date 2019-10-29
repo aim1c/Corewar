@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4B0A08D223684F1E002BEF8E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A08D123684F1E002BEF8E /* main.c */; };
 		4B0A08DC23684F9D002BEF8E /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0A08D923684F9D002BEF8E /* libft.a */; };
+		9C55110A236889E6009CD1AD /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C551109236889E6009CD1AD /* errors.c */; };
+		9C55110C23689348009CD1AD /* unsupport_flags.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C55110B23689348009CD1AD /* unsupport_flags.c */; };
+		9C55110E23689430009CD1AD /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C55110D23689430009CD1AD /* utils.c */; };
+		9C55111223689C1B009CD1AD /* check_order.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C55111123689C1B009CD1AD /* check_order.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +35,12 @@
 		4B0A08DA23684F9D002BEF8E /* ft_printf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft_printf.h; sourceTree = "<group>"; };
 		4B0A08DB23684F9D002BEF8E /* libft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
 		4B0A08DD23685703002BEF8E /* 42.cor */ = {isa = PBXFileReference; lastKnownFileType = file; path = 42.cor; sourceTree = "<group>"; };
+		9C551107236882BD009CD1AD /* oh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = oh.h; sourceTree = "<group>"; };
+		9C551108236889E6009CD1AD /* errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = errors.h; sourceTree = "<group>"; };
+		9C551109236889E6009CD1AD /* errors.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = errors.c; sourceTree = "<group>"; };
+		9C55110B23689348009CD1AD /* unsupport_flags.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = unsupport_flags.c; sourceTree = "<group>"; };
+		9C55110D23689430009CD1AD /* utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
+		9C55111123689C1B009CD1AD /* check_order.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = check_order.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +74,28 @@
 		4B0A08D023684F1E002BEF8E /* corewar */ = {
 			isa = PBXGroup;
 			children = (
+				9C55110F2368949A009CD1AD /* includes */,
 				4B0A08D123684F1E002BEF8E /* main.c */,
+				9C55111123689C1B009CD1AD /* check_order.c */,
+				9C55110D23689430009CD1AD /* utils.c */,
+				9C55110B23689348009CD1AD /* unsupport_flags.c */,
 				4B0A08DD23685703002BEF8E /* 42.cor */,
-				4B0A08D823684F4B002BEF8E /* corewar.h */,
-				4B0A08DA23684F9D002BEF8E /* ft_printf.h */,
-				4B0A08D923684F9D002BEF8E /* libft.a */,
-				4B0A08DB23684F9D002BEF8E /* libft.h */,
+				9C551109236889E6009CD1AD /* errors.c */,
 			);
 			path = corewar;
+			sourceTree = "<group>";
+		};
+		9C55110F2368949A009CD1AD /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				9C551108236889E6009CD1AD /* errors.h */,
+				4B0A08D823684F4B002BEF8E /* corewar.h */,
+				4B0A08DA23684F9D002BEF8E /* ft_printf.h */,
+				9C551107236882BD009CD1AD /* oh.h */,
+				4B0A08DB23684F9D002BEF8E /* libft.h */,
+				4B0A08D923684F9D002BEF8E /* libft.a */,
+			);
+			path = includes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +139,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4B0A08C523684F1E002BEF8E;
 			productRefGroup = 4B0A08CF23684F1E002BEF8E /* Products */;
@@ -131,7 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C55111223689C1B009CD1AD /* check_order.c in Sources */,
+				9C55110A236889E6009CD1AD /* errors.c in Sources */,
+				9C55110E23689430009CD1AD /* utils.c in Sources */,
 				4B0A08D223684F1E002BEF8E /* main.c in Sources */,
+				9C55110C23689348009CD1AD /* unsupport_flags.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/corewar/includes\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -235,6 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/corewar/includes\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
