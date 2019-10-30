@@ -13,6 +13,7 @@
 
 void	panic_memory(void);
 void	panic_error(void);
-
+void	panic_many_players(void);
+void	panic_file_not_find(void);
 
 #endif /* errors_h */

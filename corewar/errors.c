@@ -18,8 +18,20 @@ void	panic_error(void)
 	exit(EXIT_FAILURE);
 }
 
-void	panic_memory()
+void	panic_memory(void)
 {
-	ft_printf("Memmory error. I'm terrible sorry.");
+	ft_printf("Error: - Memmory error. I'm terrible sorry.\n");
 	exit(EXIT_FAILURE);
+}
+
+void	panic_many_players(void)
+{
+	ft_printf("Error: - Count of players highest than 4\n");
+	panic_error();
+}
+
+void	panic_file_not_find(void)
+{
+	ft_printf("Error: - File not found\n");
+	panic_error();
 }

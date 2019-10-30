@@ -30,3 +30,21 @@ int		all_digits(char *str)
 			return (0);
 	return (1);
 }
+
+int		find_copy(int *arr, int limits, int default_value)
+{
+	int		i;
+	int		j;
+	int		have_copy;
+	
+	i = -1;
+	while (++i < limits)
+	{
+		have_copy = arr[i];
+		j = -1;
+		while (++j < limits)
+			if (j != i && have_copy == arr[j] && arr[j] != default_value)
+				return (0);
+	}
+	return (1);
+}
