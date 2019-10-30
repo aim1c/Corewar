@@ -13,6 +13,6 @@ t_vm	*init_vm(void)
 	t_vm *vm;
 	
 	vm = (t_vm *)malloc(sizeof(t_vm));
-	
+	ft_bzero(vm->map, MEM_SIZE);
 	return (vm);
 }

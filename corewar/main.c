@@ -24,7 +24,6 @@ void	parse_handler(t_champion *ch, int argc, char **argv, int count)
 {
 	set_id_and_fd_to_list(order_id(argc, argv), argc, argv, ch);
 	fill_players(ch, count);
-	print_info(ch);
 }
 
 int main(int argc, char *argv[])
@@ -35,6 +34,7 @@ int main(int argc, char *argv[])
 	vm = init_vm();
 	ch = init_handler(error_handler(argc, argv), vm);
 	parse_handler(ch, argc, argv, vm->count_players);
+	fill_arena_handker(vm, ch);
+	print_arena(vm);
+	ft_printf("\n");
 }
-
-

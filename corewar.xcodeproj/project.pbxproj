@@ -14,12 +14,13 @@
 		4B39587723693449004BCB5B /* parsing_players.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B39587623693449004BCB5B /* parsing_players.c */; };
 		4B395879236935A0004BCB5B /* get_data_from_file.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B395878236935A0004BCB5B /* get_data_from_file.c */; };
 		4B39587B23693739004BCB5B /* print_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B39587A23693739004BCB5B /* print_info.c */; };
-		4BCC04592368E8980009E0EC /* check_fd_and_magic_header.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC04582368E8980009E0EC /* check_fd_and_magic_header.c */; };
 		4BCC045B2368EFF50009E0EC /* init_players.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC045A2368EFF50009E0EC /* init_players.c */; };
 		9C55110A236889E6009CD1AD /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C551109236889E6009CD1AD /* errors.c */; };
 		9C55110C23689348009CD1AD /* unsupport_flags.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C55110B23689348009CD1AD /* unsupport_flags.c */; };
 		9C55110E23689430009CD1AD /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C55110D23689430009CD1AD /* utils.c */; };
 		9C55111223689C1B009CD1AD /* check_order.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C55111123689C1B009CD1AD /* check_order.c */; };
+		9C607A842369AB3100A0B735 /* check_fd_and_magic_header.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C607A832369AB3100A0B735 /* check_fd_and_magic_header.c */; };
+		9C607A87236A1B9100A0B735 /* prepare_arena.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C607A86236A1B9100A0B735 /* prepare_arena.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,7 +48,6 @@
 		4B39587623693449004BCB5B /* parsing_players.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parsing_players.c; sourceTree = "<group>"; };
 		4B395878236935A0004BCB5B /* get_data_from_file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = get_data_from_file.c; sourceTree = "<group>"; };
 		4B39587A23693739004BCB5B /* print_info.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print_info.c; sourceTree = "<group>"; };
-		4BCC04582368E8980009E0EC /* check_fd_and_magic_header.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = check_fd_and_magic_header.c; sourceTree = "<group>"; };
 		4BCC045A2368EFF50009E0EC /* init_players.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_players.c; sourceTree = "<group>"; };
 		9C551107236882BD009CD1AD /* oh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = oh.h; sourceTree = "<group>"; };
 		9C551108236889E6009CD1AD /* errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = errors.h; sourceTree = "<group>"; };
@@ -55,6 +55,9 @@
 		9C55110B23689348009CD1AD /* unsupport_flags.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = unsupport_flags.c; sourceTree = "<group>"; };
 		9C55110D23689430009CD1AD /* utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
 		9C55111123689C1B009CD1AD /* check_order.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = check_order.c; sourceTree = "<group>"; };
+		9C607A832369AB3100A0B735 /* check_fd_and_magic_header.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = check_fd_and_magic_header.c; sourceTree = "<group>"; };
+		9C607A85236A1A7E00A0B735 /* wasp.cor */ = {isa = PBXFileReference; lastKnownFileType = file; path = wasp.cor; sourceTree = "<group>"; };
+		9C607A86236A1B9100A0B735 /* prepare_arena.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = prepare_arena.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,13 +93,15 @@
 			children = (
 				9C55110F2368949A009CD1AD /* includes */,
 				4B0A08D123684F1E002BEF8E /* main.c */,
+				9C607A86236A1B9100A0B735 /* prepare_arena.c */,
+				9C607A85236A1A7E00A0B735 /* wasp.cor */,
 				4B39587623693449004BCB5B /* parsing_players.c */,
 				4B39587A23693739004BCB5B /* print_info.c */,
 				4B395878236935A0004BCB5B /* get_data_from_file.c */,
 				4B395872236919FF004BCB5B /* ranking.c */,
 				4BCC045A2368EFF50009E0EC /* init_players.c */,
+				9C607A832369AB3100A0B735 /* check_fd_and_magic_header.c */,
 				4B395874236933F9004BCB5B /* init_vm.c */,
-				4BCC04582368E8980009E0EC /* check_fd_and_magic_header.c */,
 				9C55111123689C1B009CD1AD /* check_order.c */,
 				9C55110D23689430009CD1AD /* utils.c */,
 				9C55110B23689348009CD1AD /* unsupport_flags.c */,
@@ -178,13 +183,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C55111223689C1B009CD1AD /* check_order.c in Sources */,
+				9C607A842369AB3100A0B735 /* check_fd_and_magic_header.c in Sources */,
 				4B39587B23693739004BCB5B /* print_info.c in Sources */,
-				4BCC04592368E8980009E0EC /* check_fd_and_magic_header.c in Sources */,
 				4BCC045B2368EFF50009E0EC /* init_players.c in Sources */,
 				4B39587723693449004BCB5B /* parsing_players.c in Sources */,
 				9C55110A236889E6009CD1AD /* errors.c in Sources */,
 				4B395873236919FF004BCB5B /* ranking.c in Sources */,
 				4B395879236935A0004BCB5B /* get_data_from_file.c in Sources */,
+				9C607A87236A1B9100A0B735 /* prepare_arena.c in Sources */,
 				9C55110E23689430009CD1AD /* utils.c in Sources */,
 				4B0A08D223684F1E002BEF8E /* main.c in Sources */,
 				9C55110C23689348009CD1AD /* unsupport_flags.c in Sources */,

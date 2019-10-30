@@ -16,6 +16,7 @@
 
 typedef struct 			s_vm
 {
+	unsigned char		map[MEM_SIZE];
 	int					nbr_cycles;
 	int					has_n;
 	int					has_dump;
@@ -56,8 +57,11 @@ unsigned char			*get_player_code(int fd);
 void					fill_players(t_champion *ch, int count);
 
 //print info
-void		print_info(t_champion *ch);
+void					print_info(t_champion *ch);
+void					print_arena(t_vm *vm);
 
+//arena fill
+void					fill_arena_handker(t_vm *vm, t_champion *ch);
 
 
 //util

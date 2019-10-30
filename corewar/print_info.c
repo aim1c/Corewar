@@ -27,14 +27,24 @@ void		print_info(t_champion *ch)
 	ft_printf("This is a code: - \n");
 	while(++i < CHAMP_MAX_SIZE)
 	{
-		unsigned char new = ch->code[i];
-		ft_printf("%02x", new);
-			ft_printf(" ");
-		if (++row == 30)
+		if (++row % 64 == 0)
 		{
 			row = 0;
 			ft_printf("\n");
 		}
+		unsigned char new = ch->code[i];
+		ft_printf("%02x", new);
+			ft_printf(" ");
 	}
-	ft_printf("*****************************************************************************\n");
+	ft_printf("\n*****************************************************************************\n");
+}
+
+void	print_arena(t_vm *vm)
+{
+	int		i = -1;
+	while (++i < 4096) {
+		if (i % 64 == 0 && i != 0)
+		ft_printf("\n");
+		ft_printf("%02x ", vm->map[i]);
+	}
 }
