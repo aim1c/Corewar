@@ -66,7 +66,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "42.cor -n 2 42.cor 42.cor 42.cor -dump 1"
+            argument = "wasp.cor"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

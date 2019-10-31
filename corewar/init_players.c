@@ -39,5 +39,6 @@ t_champion		*init_handler(int count_of_players, t_vm *vm)
 	}
 	current->next = head;
 	vm->count_players = count_of_players;
+	vm->players = head;
 	return (head);
 }

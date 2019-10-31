@@ -16,11 +16,16 @@
 
 typedef struct 			s_vm
 {
-	unsigned char		map[MEM_SIZE];
-	int					nbr_cycles;
-	int					has_n;
-	int					has_dump;
+	uint8_t				map[MEM_SIZE];
 	int					count_players;
+	ssize_t				cycles_all;
+	ssize_t				cycles_to_die;
+	ssize_t				live_count;
+	ssize_t				check_count;
+	ssize_t				cycles_after_check;
+	struct s_champion	*players;
+	struct s_champion   *live_pl;
+	struct s_caret		*caret;
 }						t_vm;
 
 typedef struct			s_champion
@@ -34,6 +39,19 @@ typedef struct			s_champion
 	unsigned char		*code;
 	struct s_champion	*next;
 }						t_champion;
+
+typedef struct			s_caret
+{
+	int					id;
+	int					carry;
+	uint8_t				code;
+	ssize_t				live_cicle;
+	int					cicle_to_exec;
+	ssize_t				shift;
+	int					index;
+	int32_t				reg[REG_NUMBER];
+	struct s_caret		*next;
+}						t_caret;
 
 //validate
 int						check_unsupport_flags(int argc, char **argv);
