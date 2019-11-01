@@ -8,6 +8,16 @@
 
 #include "corewar.h"
 
+int		suppor_flags(char *flag)
+{
+	if (ft_strstr("-n", flag))
+		return (1);
+	if (ft_strstr("-dump", flag))
+		return (1);
+	return (0);
+}
+
+
 int		check_unsupport_flags(int argc, char **argv)
 {
 	int		i;
@@ -19,7 +29,7 @@ int		check_unsupport_flags(int argc, char **argv)
 	{
 		if (has_prefix(argv[i], '-'))
 		{
-			if (!(ft_strstr("-n", argv[i]) || ft_strstr("-dump", argv[i])))
+			if (!(ft_strstr("-n", argv[i]) || ft_strstr("-dump", argv[i]) || ft_strstr("-start", argv[i])))
 				panic_error();
 			count_flags += 1;
 		}

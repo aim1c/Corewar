@@ -19,7 +19,7 @@ void		print_info(t_champion *ch)
 	colomn = 0;
 	while (ch->id != 1)
 		ch = ch->next;
-	ft_printf("***************************** - Corewar Info - ******************************\n");
+	ft_printf("********** - Player Info -**********\n");
 	ft_printf("Player with id: - %d\n", ch->id);
 	ft_printf("Has name: - %s\n", ch->name);
 	ft_printf("Has comment: - %s\n", ch->comment);
@@ -41,10 +41,17 @@ void		print_info(t_champion *ch)
 
 void	print_arena(t_vm *vm)
 {
-	int		i = -1;
-	while (++i < 4096) {
+	int		fd;
+	FILE	*fl;
+	int		i;
+	
+	fl = fopen("log/arena", "wt");
+	fd = fileno(fl);
+	i = -1;
+	while (++i < 4096)
+	{
 		if (i % 64 == 0 && i != 0)
-		ft_printf("\n");
-		ft_printf("%02x ", vm->map[i]);
+			dprintf(fd, "\n");
+		dprintf(fd, "%02x ", vm->map[i]);
 	}
 }

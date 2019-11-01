@@ -77,10 +77,15 @@ void					fill_players(t_champion *ch, int count);
 //print info
 void					print_info(t_champion *ch);
 void					print_arena(t_vm *vm);
+void					print_caret_info(t_vm *vm);
+void					give_log(t_vm *vm);
+
 
 //arena fill
 void					fill_arena_handker(t_vm *vm, t_champion *ch);
 
+//caret init
+t_caret					*init_caret(t_vm *vm);
 
 //util
 int						has_prefix(char *str, char sub_char);

@@ -26,36 +26,37 @@ void	parse_handler(t_champion *ch, int argc, char **argv, int count)
 	fill_players(ch, count);
 }
 
-t_caret		*make_caret_with_count(int count_of_players)
+static t_champion *find_for_id(t_champion *ch, int count_of_players, int id)
 {
-	t_caret		*caret_head;
-	t_caret		*caret_cur;
 	int			i;
 	
 	i = 0;
-	caret_head = malloc(sizeof(t_caret));
-	caret_head->next = 0;
 	while (++i <= count_of_players)
 	{
-		caret_head->id = i;
-		caret_head->carry = 0;
-		caret_head->reg[0] = i * -1;
+		if (id == ch->id)
+			return (ch);
+		ch = ch->next;
 	}
-	return (caret_head);
+	return (0);
 }
 
-t_caret		*init_caret(t_vm *vm)
+void	introduce_yourself(t_champion *pl, int count_of_players)
 {
-	t_caret		*caret;
+	int		id;
 	
-	caret = make_caret_with_count(vm->count_players);
-	return (caret);
+	id = 0;
+	ft_printf("Introducing contestants...\n");
+	while (++id <= count_of_players)
+	{
+		pl = find_for_id(pl, count_of_players, id);
+		ft_printf("* Player %d, weighing %d bytes, \"%s\" (\"%s\") !\n", pl->id, pl->size_code, pl->name, pl->comment);
+	}
 }
 
-//void	carete_handler(t_vm *vm, t_champion *ch)
-//{
-//	vm->caret =
-//}
+void	game(t_vm *vm)
+{
+	introduce_yourself(vm->players, vm->count_players);
+}
 
 int main(int argc, char *argv[])
 {
@@ -66,6 +67,15 @@ int main(int argc, char *argv[])
 	ch = init_handler(error_handler(argc, argv), vm);
 	parse_handler(ch, argc, argv, vm->count_players);
 	fill_arena_handker(vm, ch);
-	print_arena(vm);
+	init_caret(vm);
+	give_log(vm);
+	game(vm);
 	ft_printf("\n");
+}
+
+void	give_log(t_vm *vm)
+{
+	//print_info(vm->players);
+	print_caret_info(vm);
+	print_arena(vm);
 }
