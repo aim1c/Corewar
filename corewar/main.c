@@ -59,7 +59,7 @@ void	game(t_vm *vm)
 	check_command_test(vm);
 }
 
-int main(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
 	t_champion	*ch;
 	t_vm		*vm;

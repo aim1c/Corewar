@@ -3,14 +3,9 @@
 ********** the state after initiate  **********
 ********** Carete/Cursor/Каретка     **********
 
-ID:		3
-CARRY:		0
-INDEX:		2730
-REGISTERS: 	|-3|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|
-		---------------- Let's start to next carete! ----------------		
 ID:		2
 CARRY:		0
-INDEX:		1365
+INDEX:		2048
 REGISTERS: 	|-2|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|
 		---------------- Let's start to next carete! ----------------		
 ID:		1

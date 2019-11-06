@@ -14,6 +14,7 @@
 #include "errors.h"
 #include "oh.h"
 #include "caret.h"
+#include "commands.h"
 
 typedef struct 			s_vm
 {
@@ -56,7 +57,7 @@ typedef struct			s_caret
 
 //tests
 
-int		check_command_test(t_vm *vm);
+int						catch_command(t_vm *vm);
 
 
 //validate

@@ -66,7 +66,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "wasp.cor"
+            argument = "wasp.cor kalle.cor"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

@@ -52,6 +52,7 @@
 		4B395878236935A0004BCB5B /* get_data_from_file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = get_data_from_file.c; sourceTree = "<group>"; };
 		4B39587A23693739004BCB5B /* print_info.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print_info.c; sourceTree = "<group>"; };
 		4BCC045A2368EFF50009E0EC /* init_players.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_players.c; sourceTree = "<group>"; };
+		4BE1D6772372F5E3003FADCC /* commands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commands.h; sourceTree = "<group>"; };
 		9C143C4B23717834004D757A /* caret.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = caret.h; sourceTree = "<group>"; };
 		9C143C4C23717834004D757A /* caret.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = caret.c; sourceTree = "<group>"; };
 		9C551107236882BD009CD1AD /* oh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = oh.h; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 				9C143C4B23717834004D757A /* caret.h */,
 				4B0A08DB23684F9D002BEF8E /* libft.h */,
 				4B0A08D923684F9D002BEF8E /* libft.a */,
+				4BE1D6772372F5E3003FADCC /* commands.h */,
 			);
 			path = includes;
 			sourceTree = "<group>";
