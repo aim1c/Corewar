@@ -13,6 +13,7 @@
 #include <fcntl.h>
 #include "errors.h"
 #include "oh.h"
+#include "caret.h"
 
 typedef struct 			s_vm
 {
@@ -52,6 +53,11 @@ typedef struct			s_caret
 	int32_t				reg[REG_NUMBER];
 	struct s_caret		*next;
 }						t_caret;
+
+//tests
+
+int		check_command_test(t_vm *vm);
+
 
 //validate
 int						check_unsupport_flags(int argc, char **argv);

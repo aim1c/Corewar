@@ -56,6 +56,7 @@ void	introduce_yourself(t_champion *pl, int count_of_players)
 void	game(t_vm *vm)
 {
 	introduce_yourself(vm->players, vm->count_players);
+	check_command_test(vm);
 }
 
 int main(int argc, char *argv[])
